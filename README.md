@@ -13,18 +13,18 @@ Uma API REST moderna desenvolvida para o ecossistema **DogCamp**. O objetivo pri
 
 ## ⚙️ Instalação
 
-1. **Clonar o Repositório** 📂
+1. **Clonar o Repositório** 
    ```bash
    git clone git@github.com:ThorVands/tdcBack.git
 
-2. **Instalar Dependências** 📂
+2. **Instalar Dependências** 
    ```bash
    npm install
 
-3. **Configurar Ambiente** 📂
+3. **Configurar Ambiente** 
    ```bash
    npm install
 
-4. **Rodar em Desenvolvimento** 📂
+4. **Rodar em Desenvolvimento** 
    ```bash
    npm install
