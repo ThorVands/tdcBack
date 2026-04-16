@@ -20,11 +20,11 @@ Uma API REST moderna desenvolvida para o ecossistema **DogCamp**. O objetivo pri
 2. **Instalar Dependências** 
    ```bash
    npm install
-
+   
 3. **Configurar Ambiente** 
    ```bash
-   npm install
+   Crie um arquivo .env na raiz do projeto (Os dados tem que ser compartilhados por algum membro do projeto)
 
 4. **Rodar em Desenvolvimento** 
    ```bash
-   npm install
+   npm run dev
