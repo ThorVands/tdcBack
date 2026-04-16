@@ -1,10 +1,11 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model, Types } from 'mongoose'
 
 interface User{
     username:String,
     password:String,
     role:String,
-    AccessKey:String
+    AccessKey:String,
+    profileId:Types.ObjectId
 }
 
 const UserSchema = new Schema<User>({
@@ -25,6 +26,11 @@ const UserSchema = new Schema<User>({
     AccessKey:{
         type:String,
         required:false
+    },
+    profileId:{
+        type:Schema.Types.ObjectId,
+        required:true,
+        refPath:'role'
     }
 
 })
