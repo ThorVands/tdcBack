@@ -8,7 +8,7 @@ interface Vet{
     notes:string
 }
 
-const VetSchema = new Schema({
+const VetSchema = new Schema<Vet>({
     user:{
         type:Schema.Types.ObjectId,
         ref:'User',
