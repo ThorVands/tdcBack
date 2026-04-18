@@ -1,14 +1,5 @@
 import { Schema, model, Types } from 'mongoose';
 
-interface Client{
-    name:string,
-    cpf:string,
-    phone:string,
-    isActive:boolean,
-    address: Address,
-    user: Types.ObjectId
-}
-
 interface Address{
     street:string,
     number:string,
@@ -19,7 +10,24 @@ interface Address{
     complement?:string
 }
 
-export const ClientSchema = new Schema<Client>({
+interface Client{
+    user: Types.ObjectId
+    name:string,
+    cpf:string,
+    phone:string,
+    isActive:boolean,
+    address: Address,
+}
+
+
+
+const ClientSchema = new Schema<Client>({
+    user:{
+        type:Schema.Types.ObjectId,
+        ref:'User',
+        required:true,
+        unique:true
+    },
     name:{
         type:String,
         required:true,
@@ -47,12 +55,7 @@ export const ClientSchema = new Schema<Client>({
         city:String,
         complement:String
     },
-    user:{
-        type:Schema.Types.ObjectId,
-        ref:'User',
-        required:true,
-        unique:true
-    }
+    
     
 })
 

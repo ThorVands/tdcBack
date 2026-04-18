@@ -1,17 +1,18 @@
 import { Schema, model, Types } from 'mongoose'
 
 interface User{
-    username:String,
-    password:String,
-    role:String,
-    AccessKey:String,
+    username:string,
+    password:string,
+    role:string,
+    accessKey:string,
     profileId:Types.ObjectId
 }
 
 const UserSchema = new Schema<User>({
     username:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     password:{
         type:String,
@@ -20,10 +21,10 @@ const UserSchema = new Schema<User>({
     role:{
         type:String,
         required:true,
-        enum:['ADMIN','CLIENT','VET'],
-        default:'CLIENT'
+        enum:['Admin','Client','Vet'],
+        default:'Client'
     },
-    AccessKey:{
+    accessKey:{
         type:String,
         required:false
     },
@@ -32,7 +33,6 @@ const UserSchema = new Schema<User>({
         required:true,
         refPath:'role'
     }
-
 })
 
 export const UserModel = model<User>('User',UserSchema)
