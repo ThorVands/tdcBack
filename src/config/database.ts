@@ -3,9 +3,9 @@ import mongoose from 'mongoose'
 
 // Conexão com o mongoDB Atlas
 // e retorna se a conexão com bem sucedida
-const connectDB = async () =>{
-    await mongoose.connect(process.env.MONGODB_URI || '')
+const connectDB = async () =>{   
     try{
+        await mongoose.connect(process.env.MONGODB_URI || '')
         console.log('✅ MongoDB Atlas pronto para o DogCamp!')
     }catch(err){
 
