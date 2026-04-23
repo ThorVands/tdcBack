@@ -21,7 +21,7 @@ const UserSchema = new Schema<User>({
     role:{
         type:String,
         required:true,
-        enum:['Admin','Client','Vet'],
+        enum:['Admin','Client','Vet','Manager'],
         default:'Client'
     },
     accessKey:{

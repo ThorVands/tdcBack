@@ -19,7 +19,7 @@ export const adminLogin = async (req:Request, res:Response) =>{
             process.env.JWT_SECRET!,
             {expiresIn:'8h'}
         )
-        console.log('Processo completo, enviando token de login')
+
         return res.json({
             user:{
                 id:user._id,
