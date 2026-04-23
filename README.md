@@ -28,3 +28,8 @@ Uma API REST moderna desenvolvida para o ecossistema **DogCamp**. O objetivo pri
 4. **Rodar em Desenvolvimento** 
    ```bash
    npm run dev
+
+
+## 🔒 Próximos Passos de Segurança
+-  Implementar HttpOnly Cookies para armazenamento do JWT.
+-  Implementar Logout com comunicação com o BackEnd.
